@@ -10,16 +10,11 @@ perl:
 
 install:
 - cpanm --quiet --notest
-  Devel::Cover::Report::Coveralls
   Parse::RecDescent
 
 script:
 - perl Makefile.PL < /dev/null
 - make test
-- cover
-
-after_success:
-- cover -report coveralls
 
 # Hack to not run on tag pushes:
 branches:
