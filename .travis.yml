@@ -14,7 +14,7 @@ install:
   Parse::RecDescent
 
 script:
-- perl Makefile.PL
+- perl Makefile.PL < /dev/null
 - make test
 - cover
 
