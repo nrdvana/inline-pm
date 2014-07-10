@@ -11,7 +11,11 @@ BEGIN {
     plan(tests => 2,
          todo => [],
          onfail => sub {},
+<<<<<<< HEAD
     );
+=======
+        );
+>>>>>>> Replace Tabs With Spaces 02config.t
 }
 
 # test 1
