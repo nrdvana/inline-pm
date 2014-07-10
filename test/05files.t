@@ -22,7 +22,11 @@ BEGIN {
     plan(tests => 1,
          todo => [],
          onfail => sub {},
+<<<<<<< HEAD
     );
+=======
+        );
+>>>>>>> Replace Tabs With Spaces 05files.t
 }
 
 # test 1
