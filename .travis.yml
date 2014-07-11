@@ -35,9 +35,10 @@ notifications:
   irc:
     channels:
     - irc.perl.org#inline
-    on_success: change
+    on_success: always
     on_failure: always
     use_notice: true
+    skip_join: true
 
 # Hack to not run on tag pushes:
 branches:
