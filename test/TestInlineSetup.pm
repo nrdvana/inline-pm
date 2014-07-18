@@ -3,6 +3,7 @@ package TestInlineSetup;
 
 use diagnostics;
 use File::Path;
+use File::Spec;
 
 sub import {
     my ($package, $option) = @_;
@@ -16,6 +17,7 @@ BEGIN {
     $inline_dir = "_Inline_$inline_dir";
     rmtree($inline_dir) if -d $inline_dir;
     mkdir($inline_dir) or die;
+    $inline_dir = File::Spec->rel2abs(File::Spec->catdir(File::Spec->curdir(),$inline_dir)); # absolute in case of chdir
 }
 
 END {

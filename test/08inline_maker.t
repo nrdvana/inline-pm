@@ -4,6 +4,9 @@ use IPC::Cmd qw/run/;
 use Config;
 use Test::More;
 use diagnostics;
+use File::Basename;
+use lib dirname(__FILE__);
+use TestInlineSetup;
 
 my $example_modules_dir = undef;
 
@@ -23,7 +26,7 @@ else {
 }
 
 my $lib_dir  = File::Spec->rel2abs(File::Spec->catdir(File::Spec->curdir(),'lib'));
-my $inst_dir = File::Spec->rel2abs(File::Spec->catdir(File::Spec->curdir(),'_Inline_test'));
+my $inst_dir = File::Spec->rel2abs(File::Spec->catdir(File::Spec->curdir(),'_Inline_08inline_maker'));
 
 # chdir to modules and grab each of the names for use later
 my @modules = glob "$example_modules_dir/*";
