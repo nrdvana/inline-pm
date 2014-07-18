@@ -24,6 +24,7 @@ test:
   requires:
     Test::More: 0.88
     Test::Warn: 0.23
+    Inline::C: 0.57
 
 devel:
   git: https://github.com/ingydotnet/inline-pm
