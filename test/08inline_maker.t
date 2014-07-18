@@ -40,7 +40,7 @@ sub do_make {
   my $buffer = '';
   my $cmd = [$Config{make}, $target];
   my @result = run(command => $cmd, verbose => 0, buffer => \$buffer);
-  ok($result[0], "make test");
+  ok($result[0], "make $target");
   diag $buffer unless $result[0];
 }
 
