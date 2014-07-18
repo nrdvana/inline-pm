@@ -9,11 +9,7 @@ BEGIN {
     plan(tests => 1, 
          todo => [],
          onfail => sub {},
-<<<<<<< HEAD
     );
-=======
-        );
->>>>>>> Replace Tabs With Spaces 04create.t
     delete $ENV{PERL_INLINE_DIRECTORY};
     delete $ENV{HOME};
 }

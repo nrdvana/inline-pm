@@ -1,26 +1,9 @@
-<<<<<<< HEAD
 use strict; use warnings;
 use File::Basename;
 use lib dirname(__FILE__);
 use TestInlineSetup;
 
 use Test::More;
-=======
-use File::Spec;
-use lib (File::Spec->catdir(File::Spec->curdir(),'blib','lib'), File::Spec->curdir());
-use strict;
-use Test;
-use diagnostics;
-
-BEGIN {
-    # XXX Not working with `prove -lv t` yet
-    # plan(tests => 9,
-    plan(tests => 7,
-         todo => [],
-         onfail => sub {},
-        );
-}
->>>>>>> Replace Tabs With Spaces 01usages.t
 
 use Inline Config => DIRECTORY => '_Inline_01usages';
 

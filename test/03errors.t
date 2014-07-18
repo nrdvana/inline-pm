@@ -12,11 +12,7 @@ BEGIN {
     plan(tests => 3,
          todo => [],
          onfail => sub {},
-<<<<<<< HEAD
     );
-=======
-        );
->>>>>>> Replace Tabs With Spaces 03errors.t
 }
 
 # test 1
