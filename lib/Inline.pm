@@ -395,7 +395,7 @@ sub check_config {
                   unless $value =~ /^[a-zA-Z_](\w|::)*$/;
             }
             elsif ($key eq 'VERSION') {
-                croak M13_usage_VERSION($value) unless $value =~ /^\d\.\d\d*$/;
+                croak M13_usage_VERSION($value) unless $value =~ /^\d\.\d[\d_]*$/;
             }
             $o->{CONFIG}{$key} = $value;
         }
@@ -1537,7 +1537,7 @@ sub M13_usage_VERSION {
     my ($version) = @_;
     return <<END;
 Invalid value for VERSION config option: '$version'
-Must be of the form '#.##'.
+Must begin with '#.#'.
 (Should also be specified as a string rather than a floating point number)
 
 END
