@@ -40,7 +40,7 @@ END
         $version = ExtUtils::MM_Unix->parse_version($args{VERSION_FROM})
           or croak "Can't determine version for $name\n";
     }
-    croak <<END unless $version =~ /^\d\.\d[\d_]*$/;
+    croak <<END unless $version =~ /^\d+\.\d[\d_]*$/;
 Invalid version '$version' for $name.
 Must begin with '#.#'. (For instance '1.23')
 END

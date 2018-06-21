@@ -395,7 +395,7 @@ sub check_config {
                   unless $value =~ /^[a-zA-Z_](\w|::)*$/;
             }
             elsif ($key eq 'VERSION') {
-                croak M13_usage_VERSION($value) unless $value =~ /^\d\.\d[\d_]*$/;
+                croak M13_usage_VERSION($value) unless $value =~ /^\d+\.\d[\d_]*$/;
             }
             $o->{CONFIG}{$key} = $value;
         }
